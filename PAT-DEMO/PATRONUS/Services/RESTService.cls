@@ -14,6 +14,7 @@ ClassMethod SendReport() As %Status
 	
 	set tSC=##class(%ZEN.Auxiliary.jsonProvider).%ConvertJSONToObject(%request.Content,"PATRONUS.Class.ReportBody",.jsonRequest,$$$YES)
 	//add comment
+	//2nd comment
 	Set tSC = ##class(Ens.Director).CreateBusinessService("ReportService",.bService)
  	If ($IsObject(bService)) set tSC=bService.ProcessInput(jsonRequest,.pResponse)
  	
