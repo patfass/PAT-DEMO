@@ -7,7 +7,7 @@ Method OnProcessInput(pInput As %RegisteredObject, Output pOutput As %Registered
 	set pRequest = ##class(PATRONUS.Messages.ReportRequest).%New()
 
 	set pRequest.HL7MessageId=pInput.HL7MessageId
-	//add comment
+
 	set pRequest.ConsultId=pInput.ConsultId
 	set pRequest.PDFReport=pInput.PDFReport
 	
